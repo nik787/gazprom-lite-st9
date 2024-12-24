@@ -1,0 +1,65 @@
+.btn {
+  align-items: center;
+  background-color: $color-royal-blue-1;
+  border: none;
+  border-radius: 8px;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  width: 140px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  transition: background-color $transition-300;
+
+  &:hover,
+  &:focus-visible {
+    &:not(.btn--xl) {
+      background-color: $color-free-speech-blue;
+    }
+  }
+
+  &--xl {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
+    padding: 18px;
+    width: 276px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    border-radius: 16px;
+    z-index: 1000;
+
+    &::before {
+      content: "";
+      display: block;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $color-deep-lilac;
+      transition: opacity $transition-300;
+      z-index: -1000;
+    }
+
+    &:hover,
+    &:focus-visible {
+      
+      &::before {
+        opacity: 1;
+      }
+  }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+}
